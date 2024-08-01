@@ -28,8 +28,6 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-
-
     fun numberAction(view: View)
     {
         tvWork = findViewById(R.id.tvWorking)
@@ -109,15 +107,15 @@ class MainActivity : AppCompatActivity() {
         {
             return ""
         }
-        
+
         val result = addSubstractCalculate(mulitpleDivide)
 
         return result.toString()
     }
 
+
     private fun addSubstractCalculate(passedList: MutableList<Any>): Float
     {
-
         var result = passedList[0] as Float
 
         for(i in passedList.indices)
@@ -156,18 +154,18 @@ class MainActivity : AppCompatActivity() {
             if (passedList[i] is Char && i != passedList.lastIndex && i < restartIndex) {
                 val operator = passedList[i]
                 val prevDigit = passedList[i - 1] as Float
-                val lastDigit = passedList[i + 1] as Float
+                val nextDigit = passedList[i + 1] as Float
 
                 when(operator)
                 {
                     'x' ->
                     {
-                        newList.add(prevDigit * lastDigit)
+                        newList.add(prevDigit * nextDigit)
                         restartIndex = i + 1
                     }
                     '/' ->
                     {
-                        newList.add(prevDigit / lastDigit)
+                        newList.add(prevDigit / nextDigit)
                         restartIndex = i + 1
                     }
                     else ->

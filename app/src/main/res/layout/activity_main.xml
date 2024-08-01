@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/dark_grey"
+    android:background="@color/black"
     tools:ignore="HardcodedText"
     tools:context=".MainActivity">
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -51,21 +51,25 @@
         <Button
             style="@style/buttonNumber"
             android:text="AC"
+            android:background="@drawable/action_round_button"
             android:onClick="allClearAction"
-            android:textColor="@color/red"/>
+            android:textColor="@color/black"/>
 
         <Button
             style="@style/buttonNumber"
+            android:text="⌫"
+            android:background="@drawable/action_round_button"
             android:onClick="backspaceAction"
-            android:textColor="@color/red"
-            android:text="⌫"/>
+            android:textColor="@color/black" />
 
         <Button
             style="@style/buttonNumber"
+            android:background="@drawable/action_round_button"
             android:text=""/>
 
         <Button
             style="@style/buttonOperator"
+            android:background="@drawable/operator_round_button"
             android:text="/"/>
     </LinearLayout>
 
@@ -135,20 +139,18 @@
 
         <Button
             style="@style/buttonNumber"
-            android:text="."/>
-
-        <Button
-            style="@style/buttonNumber"
+            android:layout_weight="2"
             android:text="0"/>
 
         <Button
             style="@style/buttonNumber"
-            android:layout_weight="2"
-            android:background="@color/orange"
-            android:textSize="40sp"
+            android:text="."/>
+
+        <Button
+            style="@style/buttonNumber"
+            android:textSize="25sp"
+            android:background="@drawable/operator_round_button"
             android:onClick="equalsAction"
             android:text="="/>
     </LinearLayout>
-
-
 </LinearLayout>
