@@ -1,6 +1,5 @@
 package com.example.kotlincalculatorapp
 
-import android.content.Intent
 import android.content.res.Configuration
 import android.os.Bundle
 import android.view.View
@@ -27,12 +26,9 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-
-        // Set up button to navigate to TipActivity
-        findViewById<Button>(R.id.tip).setOnClickListener {
-            startActivity(Intent(this, TipActivity::class.java))
-        }
     }
+
+
 
     fun numberAction(view: View)
     {

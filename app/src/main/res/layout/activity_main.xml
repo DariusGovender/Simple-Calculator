@@ -62,8 +62,7 @@
 
         <Button
             style="@style/buttonNumber"
-            android:id="@+id/tip"
-            android:text="Tip"/>
+            android:text=""/>
 
         <Button
             style="@style/buttonOperator"
