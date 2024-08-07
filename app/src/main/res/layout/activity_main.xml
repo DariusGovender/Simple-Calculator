@@ -65,7 +65,8 @@
         <Button
             style="@style/buttonNumber"
             android:background="@drawable/action_round_button"
-            android:text=""/>
+            android:text=""
+            android:textColor="@color/black"/>
 
         <Button
             style="@style/buttonOperator"

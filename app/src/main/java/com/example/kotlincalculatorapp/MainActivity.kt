@@ -102,7 +102,6 @@ class MainActivity : AppCompatActivity() {
         }
 
         val mulitpleDivide =  mulitpleDivideCalculate(digitsOperators)
-
         if (mulitpleDivide.isEmpty())
         {
             return ""
@@ -137,7 +136,7 @@ class MainActivity : AppCompatActivity() {
     private fun mulitpleDivideCalculate(passedList: MutableList<Any>) : MutableList<Any>
     {
         var list = passedList
-        while (list.contains('x') || list.contains('/'))
+        while (list.contains('x') || list.contains('/') || list.contains('%'))
         {
             list = calcMultiDivd(list)
         }
